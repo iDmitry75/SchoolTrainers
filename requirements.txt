@@ -1,4 +1,5 @@
 fpdf==1.7.2
+pytest==7.4.0
 
-# Pin the PDF generation library used by arithmetic.py. Install with:
+# Pin the PDF generation and test libraries used by arithmetic.py. Install with:
 #   pip install -r requirements.txt
