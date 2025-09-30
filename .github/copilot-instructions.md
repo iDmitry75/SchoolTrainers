@@ -15,10 +15,10 @@ This is a small Python utility (SchoolTrainers) that generates simple arithmetic
 
 ## Project-specific patterns & gotchas
 
-- Naming: `addict` is the method name for addition (not a typo to be auto-renamed without confirmation). If you change it, update all call sites and README examples.
-- `generate_table` accepts `optons` (misspelling) — both the variable name and usage appear in code. Preserve names when making minimal edits, or update consistently when performing refactors.
+- Naming: the addition method was renamed from `addict` to `add`. If you change it again, update all call sites and README examples.
+- `generate_table` previously used the `optons` misspelling; this repo now uses `options`. Keep names consistent when refactoring.
 - `generate_pdf` expects `text` either as a list (table rows) or a joined string; it converts lists with `"\n".join(text)`.
-- `generate_pdf` will raise ValueError if more than ~40 lines are needed for a single page. Changes that alter pagination should keep or improve that safeguard.
+- Methods: `add(n, result=False, max_result=20)`, `subtract(n, result=False)`, `multiply(n, result=False)`, `generate_table(num_examples, max_num, options=["add"])`, `generate_pdf(text, filename="output.pdf", columns=1)`.
 
 ## Environment & run commands
 

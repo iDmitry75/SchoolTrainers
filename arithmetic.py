@@ -2,7 +2,7 @@ import random
 from fpdf import FPDF
 
 class Arithmetic:
-    def addict(self, n, result=False, max_result=20):
+    def add(self, n, result=False, max_result=20):
         # Generate two random numbers a and b such that their sum is less than or equal to max_result
         while True:
             a = random.randint(1, n)
@@ -83,15 +83,15 @@ class Arithmetic:
         pdf.output(filename)
     
 
-    def generate_table(self, num_examples, max_num, optons=["addict"]):
+    def generate_table(self, num_examples, max_num, options=["add"]):
         # Generate a table of arithmetic problems based on the selected options
         table = []
-        print(len(optons), optons)
+        print(len(options), options)
         for i in range(num_examples):
-            operation = random.choice(optons)
+            operation = random.choice(options)
             print(operation)
-            if operation == "addict":
-                row = self.addict(max_num, False, 10)
+            if operation == "add":
+                row = self.add(max_num, False, 10)
             elif operation == "subtract":
                 row = self.subtract(max_num, False)
             elif operation == "multiply":
